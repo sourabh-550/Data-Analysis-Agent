@@ -1,51 +1,54 @@
-# 📊 Data Analysis Agent
+🚀 Features
 
-An automated **Data Analysis Agent** that performs **exploratory data analysis (EDA)** and **basic machine learning modeling** on uploaded datasets.  
-The project is designed to help users quickly understand datasets, visualize patterns, and evaluate baseline ML models using an interactive **Streamlit dashboard**.
+📂 Email Categorization
+Automatically classifies emails into:
 
----
+Work
 
-## 🚀 Project Overview
+Meetings
 
-Data analysis is a crucial step in any machine learning workflow, but manual exploration can be time-consuming.  
-This project simulates a **data analysis agent** that independently analyzes datasets and generates insights with minimal user input.
+Finance
 
-The system allows users to upload a CSV file and automatically:
-- Summarize the dataset
-- Detect missing values and data types
-- Generate visual insights
-- Identify relationships between features
-- Train and evaluate basic ML models
+Personal
 
----
+Promotions / Spam
 
-## ✨ Key Features
+⚡ Priority Detection
+Identifies urgent emails using keyword-based and rule-based logic.
 
-- 📂 Upload CSV datasets through a simple UI  
-- 📋 Automatic dataset profiling (rows, columns, data types)  
-- 🧹 Missing value analysis and summary statistics  
-- 📊 Visualizations:
-  - Feature distributions
-  - Correlation heatmap
-  - Outlier detection (for numerical features)
-- 🤖 Automatic problem type detection (Classification / Regression)
-- 🧠 Training and evaluation of baseline ML models
-- 🖥️ Interactive and user-friendly **Streamlit dashboard**
+🧠 Email Summarization
+Generates concise summaries for long email messages.
 
----
+✍️ Auto-Reply Suggestions
+Suggests context-aware reply templates based on email category.
 
-## 🛠️ Tech Stack
+🖥️ Interactive Web Interface
+Built with Streamlit for easy interaction.
 
-- **Programming Language:** Python  
-- **Libraries:**
-  - Pandas
-  - NumPy
-  - Matplotlib
-  - Seaborn
-  - Scikit-learn
-- **Framework:** Streamlit  
+🧩 How It Works
 
----
+Email text is cleaned and preprocessed
 
-## 📂 Project Structure
+TF-IDF is used to convert text into vectors
 
+Similarity matching is applied for classification
+
+Rule-based logic determines priority
+
+Key sentences are extracted for summarization
+
+Predefined templates generate reply suggestions
+
+🛠️ Tech Stack
+
+Python
+
+pandas
+
+scikit-learn
+
+NLTK
+
+Streamlit
+
+📊 Project Structure
