@@ -1,54 +1,56 @@
-🚀 Features
+📧 Email Triage Assistant
+=========================
 
-📂 Email Categorization
-Automatically classifies emails into:
+An AI-powered Email Triage Assistant designed to automatically
+categorize incoming emails, detect priority, summarize content,
+and suggest smart responses to improve inbox productivity.
 
-Work
+This project demonstrates practical NLP techniques and agent-style
+automation using lightweight, explainable methods rather than
+heavy deep learning models.
 
-Meetings
+------------------------------------------------------------
 
-Finance
+✨ Key Features
+--------------
 
-Personal
+• Automatic Email Categorization  
+  - Work  
+  - Meetings  
+  - Finance  
+  - Personal  
+  - Promotions / Spam  
 
-Promotions / Spam
+• Priority Detection  
+  - Identifies urgent emails using rule-based logic  
+  - Flags time-sensitive and action-required messages  
 
-⚡ Priority Detection
-Identifies urgent emails using keyword-based and rule-based logic.
+• Email Summarization  
+  - Extracts key sentences from long email bodies  
+  - Reduces reading time while preserving context  
 
-🧠 Email Summarization
-Generates concise summaries for long email messages.
+• Auto-Reply Suggestions  
+  - Generates context-aware response templates  
+  - Speeds up routine email replies  
 
-✍️ Auto-Reply Suggestions
-Suggests context-aware reply templates based on email category.
+• Interactive Dashboard  
+  - Built using Streamlit  
+  - Displays category, priority, summary, and reply suggestions  
 
-🖥️ Interactive Web Interface
-Built with Streamlit for easy interaction.
-
-🧩 How It Works
-
-Email text is cleaned and preprocessed
-
-TF-IDF is used to convert text into vectors
-
-Similarity matching is applied for classification
-
-Rule-based logic determines priority
-
-Key sentences are extracted for summarization
-
-Predefined templates generate reply suggestions
+------------------------------------------------------------
 
 🛠️ Tech Stack
+--------------
 
-Python
+• Python  
+• pandas  
+• scikit-learn  
+• NLTK  
+• Streamlit  
 
-pandas
+------------------------------------------------------------
 
-scikit-learn
-
-NLTK
-
-Streamlit
-
-📊 Project Structure
+📁 Project Structure
+--------------------
+Feel free to open an issue or submit a pull request.
+*/
