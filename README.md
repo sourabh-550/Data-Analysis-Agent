@@ -1,56 +1,35 @@
-📧 Email Triage Assistant
-=========================
+ * ============================================================
+ * 🛠️ IT Helpdesk Chatbot
+ * ============================================================
+ *
+ * An AI-powered IT Helpdesk Chatbot designed to automate the
+ * resolution of common technical issues in an enterprise
+ * environment. The chatbot analyzes user queries and provides
+ * relevant troubleshooting solutions from a curated knowledge
+ * base, reducing response time and support costs.
+ *
+ * ============================================================
+ * 📌 Project Overview
+ * ============================================================
+ *
+ * This project simulates a real-world enterprise IT support
+ * system. It assists users with common issues such as network
+ * connectivity problems, account access errors, and software-
+ * related queries using Natural Language Processing techniques.
+ *
+ * Instead of relying on human agents for repetitive requests,
+ * the chatbot delivers instant, accurate responses based on
+ * historical ticket data and troubleshooting documentation.
+ * 
+ * ============================================================
+ * 🛠️ Tech Stack
+ * ============================================================
+ *
+ * • Python
+ * • pandas
+ * • scikit-learn
+ * • NLTK
+ * • Streamlit
+ *
 
-An AI-powered Email Triage Assistant designed to automatically
-categorize incoming emails, detect priority, summarize content,
-and suggest smart responses to improve inbox productivity.
 
-This project demonstrates practical NLP techniques and agent-style
-automation using lightweight, explainable methods rather than
-heavy deep learning models.
-
-------------------------------------------------------------
-
-✨ Key Features
---------------
-
-• Automatic Email Categorization  
-  - Work  
-  - Meetings  
-  - Finance  
-  - Personal  
-  - Promotions / Spam  
-
-• Priority Detection  
-  - Identifies urgent emails using rule-based logic  
-  - Flags time-sensitive and action-required messages  
-
-• Email Summarization  
-  - Extracts key sentences from long email bodies  
-  - Reduces reading time while preserving context  
-
-• Auto-Reply Suggestions  
-  - Generates context-aware response templates  
-  - Speeds up routine email replies  
-
-• Interactive Dashboard  
-  - Built using Streamlit  
-  - Displays category, priority, summary, and reply suggestions  
-
-------------------------------------------------------------
-
-🛠️ Tech Stack
---------------
-
-• Python  
-• pandas  
-• scikit-learn  
-• NLTK  
-• Streamlit  
-
-------------------------------------------------------------
-
-📁 Project Structure
---------------------
-Feel free to open an issue or submit a pull request.
-*/
