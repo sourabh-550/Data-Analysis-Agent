@@ -1,15 +1,21 @@
+"""Streamlit UI for the IT Helpdesk Chatbot."""
+
+from __future__ import annotations
+
 import streamlit as st
+
 from chatbot import ITHelpdeskChatbot
 
-st.set_page_config(page_title="IT Helpdesk Chatbot", page_icon="💻")
+st.set_page_config(page_title="IT Helpdesk Chatbot", page_icon="💻", layout="centered")
 
 st.title("💻 IT Helpdesk Chatbot")
-st.write("Chat with the IT support bot and get help for your issues!")
+st.caption("Describe your issue and get guided troubleshooting steps.")
 
-# Load bot only once
+
 @st.cache_resource
-def load_bot():
+def load_bot() -> ITHelpdeskChatbot:
     return ITHelpdeskChatbot("data/ticket_history.csv")
+
 
 bot = load_bot()
 
@@ -17,37 +23,48 @@ bot = load_bot()
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Display chat history
-for msg in st.session_state.messages:
-    if msg["role"] == "user":
-        st.markdown(f"**🧑 You:** {msg['content']}")
-    else:
-        st.markdown(f"**🤖 Bot:** {msg['content']}")
+# Sidebar
+with st.sidebar:
+    st.subheader("Session")
+    if st.button("🗑️ Clear Chat", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
+    st.markdown("---")
+    st.markdown("**Tips**")
+    st.markdown("- Share the exact error message if possible")
+    st.markdown("- Mention the device or app name")
+    st.markdown("- Example: *Wifi is not working*, *Keyboard not working*, *Cannot login to email*")
 
-# Input form (auto clears after submit)
-with st.form(key="chat_form", clear_on_submit=True):
-    user_input = st.text_input("Type your message:")
-    submitted = st.form_submit_button("Send")
 
-    if submitted and user_input.strip() != "":
-        # Add user message
-        st.session_state.messages.append({
-            "role": "user",
-            "content": user_input
-        })
+# Render messages (show category only for bot messages)
+def render_message(message: dict) -> None:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+        if message["role"] == "assistant" and "category" in message:
+            st.caption(f"**Category:** {message['category']}")
 
-        # Get bot reply
-        reply = bot.get_response(user_input)
 
-        # Add bot message
-        st.session_state.messages.append({
-            "role": "bot",
-            "content": reply
-        })
+# Show chat history
+for message in st.session_state.messages:
+    render_message(message)
 
-    elif submitted:
-        st.warning("Please type something!")
+# Chat input
+user_input = st.chat_input("Type your issue here...")
 
-# Clear chat button
-if st.button("🗑️ Clear Chat"):
-    st.session_state.messages = []
+if user_input:
+    # Add user message
+    st.session_state.messages.append({"role": "user", "content": user_input})
+
+    # Get bot response (dict from chatbot.py)
+    response = bot.get_response(user_input)
+
+    # Add bot message (show message + category)
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": response["message"],
+            "category": response["category"],
+        }
+    )
+
+    st.rerun()
