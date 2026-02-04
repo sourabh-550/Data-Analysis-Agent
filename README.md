@@ -49,28 +49,98 @@ The system uses a **hybrid approach**: **Machine Learning** for category predict
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Installation
 
-it-helpdesk-chatbot/
-│
-├── app.py                  # Streamlit UI
-├── chatbot.py              # Core logic (rules + ML + similarity search)
-├── nlp_utils.py            # Text cleaning + SimilarityEngine
-├── train_model.py          # Train ML classifier on Kaggle dataset
-│
-├── data/
-│   ├── ticket_history.csv  # Clean knowledge base (issue, resolution, category)
-│   └── all_tickets_processed_improved_v3.csv  # Kaggle dataset (for training)
-│
-├── models/
-│   ├── tfidf.pkl           # Saved TF-IDF vectorizer
-│   └── classifier.pkl      # Saved ML model
-│
-├── requirements.txt
-└── README.md
+## 🚀 Getting Started
+
+Clone the repository:
+
+git clone https://github.com/sourabh-550/IT-Helpdesk-chatbot.git
+cd it-helpdesk-chatbot
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Create and Activate Virtual Environment (Optional but Recommended)
 
-1. Clone the repository:
+python -m venv venv
+venv\Scripts\activate
+
+---
+
+## 📦 Install Dependencies
+
+pip install -r requirements.txt
+
+---
+
+## 🧪 Train the Model (One-Time)
+
+Dataset Link:https://www.kaggle.com/datasets/adisongoh/it-service-ticket-classification-dataset
+
+Make sure your Kaggle dataset is in `data/` as:
+
+all_tickets_processed_improved_v3.csv
+
+Run:
+
+python train_model.py
+
+This will create:
+
+models/tfidf.pkl  
+models/classifier.pkl  
+
+---
+
+## ▶️ Run the App
+
+streamlit run app.py
+
+---
+
+## 💬 Example Queries
+
+- Wifi is not working  
+- Keyboard is not working  
+- Cannot login to email  
+- VPN is not connecting  
+- I need a new laptop  
+- My leave is not updated  
+
+---
+
+## 📊 Why This Project
+
+- Uses a real-world Kaggle dataset for training  
+- Demonstrates a complete ML pipeline:  
+  Data → Training → Saving Model → Loading → Prediction  
+- Shows how hybrid systems (rules + ML + NLP search) are used in real enterprise applications  
+- Focuses on practical usability, not just model accuracy  
+- Moves beyond notebooks to a real, interactive application  
+
+---
+
+## 🎯 Future Improvements
+
+- Multi-step guided troubleshooting (Step 1 → Did it work? → Step 2)  
+- User feedback system (Was this helpful? Yes/No)  
+- Expand and refine the knowledge base  
+- Public deployment (Streamlit Cloud / Render)  
+- Role-based routing (Network team, HR team, Admin team, etc.)  
+- Analytics dashboard for common issues  
+
+---
+
+## 🙌 Acknowledgements
+
+- Kaggle – IT Service Ticket Classification Dataset  
+- GENz AI Programme – for structured learning and guidance  
+- scikit-learn & Streamlit communities  
+
+---
+
+## ⭐ If you like this project
+
+Give it a star ⭐ on GitHub and feel free to fork or contribute
+
+
