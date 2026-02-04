@@ -26,3 +26,4 @@ class SimilarityEngine:
         best_scores = sims[best_indices]
 
         return best_indices, best_scores
+#NLP part
