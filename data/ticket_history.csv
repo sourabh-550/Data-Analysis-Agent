@@ -1,0 +1,11 @@
+issue,resolution,category
+wifi disconnects frequently,Restart router and update network drivers,Hardware
+printer not printing,Restart printer and reinstall drivers,Hardware
+outlook not opening,Repair Office and disable add-ins,Access
+password expired,Reset password and update credentials,Access
+new employee onboarding,Fill onboarding form and assign required access,HR Support
+annual leave not updated,Update leave record in HR system,HR Support
+need to buy new laptop,Create purchase order and assign asset,Purchase
+vpn not connecting,Check credentials and restart VPN service,Hardware
+email not receiving,Check mail server settings and clear cache,Access
+device allocation pending,Approve request and assign device,Purchase
