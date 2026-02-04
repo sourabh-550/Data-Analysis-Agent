@@ -3,7 +3,7 @@ from chatbot import ITHelpdeskChatbot
 
 st.set_page_config(page_title="IT Helpdesk Chatbot", page_icon="💻")
 
-st.title("IT Helpdesk Chatbot")
+st.title("💻 IT Helpdesk Chatbot")
 st.write("Chat with the IT support bot and get help for your issues!")
 
 # Load bot only once
@@ -17,19 +17,19 @@ bot = load_bot()
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Show previous messages
+# Display chat history
 for msg in st.session_state.messages:
     if msg["role"] == "user":
-        st.markdown(f"**You:** {msg['content']}")
+        st.markdown(f"**🧑 You:** {msg['content']}")
     else:
-        st.markdown(f"**Bot:** {msg['content']}")
+        st.markdown(f"**🤖 Bot:** {msg['content']}")
 
-# Input box at bottom
-user_input = st.text_input("Type your message and press Enter:", key="user_input")
+# Input form (auto clears after submit)
+with st.form(key="chat_form", clear_on_submit=True):
+    user_input = st.text_input("Type your message:")
+    submitted = st.form_submit_button("Send")
 
-# Send button
-if st.button("Send"):
-    if user_input.strip() != "":
+    if submitted and user_input.strip() != "":
         # Add user message
         st.session_state.messages.append({
             "role": "user",
@@ -45,12 +45,9 @@ if st.button("Send"):
             "content": reply
         })
 
-        # Clear input box
-        st.session_state.user_input = ""
-
-    else:
+    elif submitted:
         st.warning("Please type something!")
 
 # Clear chat button
-if st.button("🗑️Clear Chat"):
+if st.button("🗑️ Clear Chat"):
     st.session_state.messages = []
