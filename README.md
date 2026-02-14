@@ -1,23 +1,33 @@
-## 🚀 Live Demo
-
-🔗 Deployed App: https://it-hepldesk-chatbot-sourabh-saxena.streamlit.app/
-
 # 💻 IT Helpdesk Chatbot (ML + NLP + Streamlit)
 
-An **IT Helpdesk Chatbot** that provides quick troubleshooting guidance for common IT issues such as **WiFi/network problems, keyboard/printer issues, login & access issues, HR requests, and asset/purchase queries**.  
-The system uses a **hybrid approach**: **Machine Learning** for category prediction + **NLP similarity search** over a **clean knowledge base** for solution retrieval, all wrapped in a **Streamlit chat UI**.
+## 🚀 Live Demo
+🔗 Deployed App: https://it-helpdesk-chatbot-sourabh-saxena.streamlit.app/
 
-> Built as part of my learning journey in the **GENz AI Programme**.
+An IT Helpdesk Chatbot that provides quick troubleshooting guidance for common IT issues such as WiFi/network problems, keyboard/printer issues, login & access issues, HR requests, and asset/purchase queries.
 
-Live Woking deployed chatbot
+The system uses a **hybrid approach**:  
+**Machine Learning** for category prediction + **NLP similarity search** over a clean knowledge base for solution retrieval, all wrapped in a **Streamlit chat UI**.
+
+Built as part of my learning journey in the **GENz AI Programme**.
+
+---
+
+## 📸 Demo Screenshots
+
+> 📌 Add your screenshots in a folder like `screenshots/` and update the file names below.
+
+![Chat UI](screenshots/ui.png)  
+![Example Query Response](screenshots/example1.png)  
+![Category Detection](screenshots/example2.png)  
+
 ---
 
 ## 🚀 Features
 
 - 💬 Chat-based UI built with Streamlit  
 - 🧠 ML-powered issue classification (trained on a real Kaggle IT Service Ticket dataset)  
-- 🔎 NLP solution retrieval using **TF-IDF + Cosine Similarity**  
-- 🧩 Hybrid system: **Rule-based routing + ML fallback** for better accuracy  
+- 🔎 NLP solution retrieval using TF-IDF + Cosine Similarity  
+- 🧩 Hybrid system: Rule-based routing + ML fallback for better accuracy  
 - 🛟 Smart fallback troubleshooting when no close match is found  
 - 📧 Shows IT contact email when escalation is needed  
 - 🏷️ Displays detected category for transparency  
@@ -31,8 +41,8 @@ Live Woking deployed chatbot
 - Streamlit (Web UI)  
 - pandas, NumPy  
 - scikit-learn  
-  - TF-IDF Vectorizer  
-  - Logistic Regression (for classification)  
+- TF-IDF Vectorizer  
+- Logistic Regression (for classification)  
 - joblib (model persistence)  
 - NLP techniques: text cleaning, vectorization, similarity search  
 
@@ -47,59 +57,70 @@ Live Woking deployed chatbot
 5. It runs TF-IDF + Cosine Similarity to find the closest matching issue.  
 6. If similarity is high → returns the best solution.  
 7. If similarity is low → shows category-specific troubleshooting steps and an IT contact email.  
-8. The UI shows the answer and the detected category.
+8. The UI shows the answer and the detected category.  
 
-> Kaggle dataset is used for training the classifier.  
-> A clean, curated .json is used for solution retrieval (to avoid noisy matches).
+- Kaggle dataset is used for training the classifier.  
+- A clean, curated `.json` is used for solution retrieval (to avoid noisy matches).  
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Setup
 
-## 🚀 Getting Started
+### 🚀 Getting Started
 
 Clone the repository:
 
+```bash
 git clone https://github.com/sourabh-550/IT-Helpdesk-chatbot.git
 cd it-helpdesk-chatbot
+```
 
----
+Create and activate virtual environment (optional but recommended):
 
-## ⚙️ Create and Activate Virtual Environment (Optional but Recommended)
-
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
----
+Install dependencies:
 
-## 📦 Install Dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
 ## 🧪 Train the Model (One-Time)
 
-Dataset Link: https://www.kaggle.com/datasets/adisongoh/it-service-ticket-classification-dataset
+Dataset Link:  
+https://www.kaggle.com/datasets/adisongoh/it-service-ticket-classification-dataset  
 
 Make sure your Kaggle dataset is in `data/` as:
 
+```
 all_tickets_processed_improved_v3.csv
+```
 
 Run:
 
+```bash
 python train_model.py
+```
 
 This will create:
 
+```
 models/tfidf.pkl  
 models/classifier.pkl  
+```
 
 ---
 
 ## ▶️ Run the App
 
+```bash
 streamlit run app.py
+```
 
 ---
 
@@ -129,7 +150,7 @@ streamlit run app.py
 
 - Multi-step guided troubleshooting (Step 1 → Did it work? → Step 2)  
 - User feedback system (Was this helpful? Yes/No)  
-- Expand and refine the knowledge base   
+- Expand and refine the knowledge base  
 - Role-based routing (Network team, HR team, Admin team, etc.)  
 - Analytics dashboard for common issues  
 
@@ -143,8 +164,4 @@ streamlit run app.py
 
 ---
 
-## ⭐ If you like this project
-
-Give it a star ⭐ on GitHub and feel free to fork or contribute
-
-
+⭐ If you like this project, give it a star on GitHub and feel free to fork or contribute!
