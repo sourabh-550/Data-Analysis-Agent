@@ -1,3 +1,7 @@
+## 🚀 Live Demo
+
+🔗 Deployed App: https://it-hepldesk-chatbot-sourabh-saxena.streamlit.app/
+
 # 💻 IT Helpdesk Chatbot (ML + NLP + Streamlit)
 
 An **IT Helpdesk Chatbot** that provides quick troubleshooting guidance for common IT issues such as **WiFi/network problems, keyboard/printer issues, login & access issues, HR requests, and asset/purchase queries**.  
@@ -5,6 +9,7 @@ The system uses a **hybrid approach**: **Machine Learning** for category predict
 
 > Built as part of my learning journey in the **GENz AI Programme**.
 
+Live Woking deployed chatbot
 ---
 
 ## 🚀 Features
@@ -45,7 +50,7 @@ The system uses a **hybrid approach**: **Machine Learning** for category predict
 8. The UI shows the answer and the detected category.
 
 > Kaggle dataset is used for training the classifier.  
-> A clean, curated CSV is used for solution retrieval (to avoid noisy matches).
+> A clean, curated .json is used for solution retrieval (to avoid noisy matches).
 
 ---
 
@@ -75,7 +80,7 @@ pip install -r requirements.txt
 
 ## 🧪 Train the Model (One-Time)
 
-Dataset Link:https://www.kaggle.com/datasets/adisongoh/it-service-ticket-classification-dataset
+Dataset Link: https://www.kaggle.com/datasets/adisongoh/it-service-ticket-classification-dataset
 
 Make sure your Kaggle dataset is in `data/` as:
 
@@ -124,8 +129,7 @@ streamlit run app.py
 
 - Multi-step guided troubleshooting (Step 1 → Did it work? → Step 2)  
 - User feedback system (Was this helpful? Yes/No)  
-- Expand and refine the knowledge base  
-- Public deployment (Streamlit Cloud / Render)  
+- Expand and refine the knowledge base   
 - Role-based routing (Network team, HR team, Admin team, etc.)  
 - Analytics dashboard for common issues  
 
