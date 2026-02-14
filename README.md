@@ -16,9 +16,9 @@ Built as part of my learning journey in the **GENz AI Programme**.
 
 > 📌 Add your screenshots in a folder like `screenshots/` and update the file names below.
 
-![Chat UI](screenshots/Web UI.png)  
-![Example Query Response](screenshots/user chat.png)  
-![Deployed and Working](screenshots/updated and deployed.png)  
+![Chat UI](screenshots/Web_UI.png)  
+![Example Query Response](screenshots/user_chat.png)  
+![Deployed and Working](screenshots/updated_and_deployed.png)  
 
 ---
 
