@@ -1,7 +1,7 @@
 # 💻 IT Helpdesk Chatbot (ML + NLP + Streamlit)
 
 ## 🚀 Live Demo
-🔗 Deployed App: https://it-helpdesk-chatbot-sourabh-saxena.streamlit.app/
+🔗 Deployed App: https://it-hepldesk-chatbot.streamlit.app/
 
 An IT Helpdesk Chatbot that provides quick troubleshooting guidance for common IT issues such as WiFi/network problems, keyboard/printer issues, login & access issues, HR requests, and asset/purchase queries.
 
