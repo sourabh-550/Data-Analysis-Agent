@@ -1,0 +1,20 @@
+issue,resolution,category
+wifi not working,Restart router and modem and update network drivers,Hardware
+internet not working,Check ISP status and restart router,Hardware
+slow internet speed,Check background downloads and restart router,Hardware
+vpn not connecting,Check credentials and restart VPN service,Access
+cannot login email,Reset password and check account status,Access
+password expired,Reset your password and log in again,Access
+cannot access folder,Check permissions and request access from admin,Access
+access denied to drive,Verify permissions and re-map the drive,Access
+keyboard not working,Reconnect keyboard and reinstall keyboard driver,Hardware
+mouse not working,Try another USB port or replace batteries,Hardware
+printer not printing,Restart printer and reinstall drivers,Hardware
+bluetooth not working,Restart Bluetooth service and update drivers,Hardware
+screen is black,Check display cable and update graphics driver,Hardware
+laptop overheating,Clean vents and close heavy applications,Hardware
+usb device not recognized,Try another port and update USB drivers,Hardware
+leave not updated,Update leave record in HR system,HR Support
+new employee onboarding,Complete onboarding form and request access,HR Support
+need new laptop,Create purchase request and wait for approval,Purchase
+device allocation pending,Check approval status and contact procurement,Purchase
